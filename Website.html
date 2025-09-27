@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpScale Marketing - Digital Marketing Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #home {
+            background-color: #fff;
+            text-align: center;
+        }
+        #services {
+            background-color: #e9ecef;
+        }
+        #about {
+            background-color: #fff;
+        }
+        #contact {
+            background-color: #e9ecef;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UpScale Marketing</h1>
+        <p>Your Partner in Digital Growth</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to UpScale Marketing</h2>
+        <p>We specialize in cutting-edge digital marketing strategies to upscale your business. From SEO to social media management, we've got you covered.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Social Media Marketing</li>
+            <li>Content Creation</li>
+            <li>Email Marketing Campaigns</li>
+            <li>Pay-Per-Click (PPC) Advertising</li>
+            <li>Web Analytics and Reporting</li>
+        </ul>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>UpScale Marketing is a team of passionate digital experts dedicated to helping businesses thrive online. With years of experience, we deliver results-driven solutions tailored to your needs.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 UpScale Marketing. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            const name = form.querySelector('input[name="name"]');
+            const email = form.querySelector('input[name="email"]');
+            const message = form.querySelector('textarea[name="message"]');
+            
+            if (!name.value || !email.value || !message.value) {
+                alert('Please fill out all fields.');
+                event.preventDefault();
+            } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault();
+            }
+        });
